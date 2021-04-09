@@ -4,10 +4,10 @@ import 'package:flutter_mvc_sample/controllers/person_controller.dart';
 import 'package:flutter_mvc_sample/models/person_model.dart';
 
 class PersonView extends StatelessWidget {
-  TextEditingController _firstnameController = TextEditingController();
-  TextEditingController _lastnameController = TextEditingController();
+  final TextEditingController _firstnameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
 
-  PersonController _personController = PersonController();
+  final PersonController _personController = PersonController();
 
   @override
   Widget build(BuildContext context) {
@@ -72,11 +72,17 @@ class PersonView extends StatelessWidget {
               child: ElevatedButton(
                 child: Text('Salvar'),
                 onPressed: () {
-                  PersonModel _personModel = PersonModel();
-                  _personModel.firstname = _firstnameController.text;
-                  _personModel.lastname = _lastnameController.text;
-                  _personController.setPerson(_personModel);
-                  _personController.setMessage('Processo concluído');
+                  // PersonModel _personModel = PersonModel();
+                  // _personModel.firstname = _firstnameController.text;
+                  // _personModel.lastname = _lastnameController.text;
+                  // _personController.setPerson(_personModel);
+                  this._personController.setPerson(
+                        PersonModel(
+                          firstname: this._firstnameController.text,
+                          lastname: this._lastnameController.text,
+                        ),
+                      );
+                  this._personController.setMessage('Processo concluído');
                 },
               ),
             ),

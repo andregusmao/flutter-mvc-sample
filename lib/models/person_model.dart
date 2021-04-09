@@ -1,19 +1,23 @@
 class PersonModel {
   // Private attributes
 
-  String _firstname = '';
-  String _lastname = '';
+  final String firstname;
+  final String lastname;
+
+  // Constructor
+
+  PersonModel({this.firstname = '', this.lastname = ''});
 
   // Getters
 
-  String get firstname => this._firstname;
-  String get lastname => this._lastname;
-  String get completedName => '${this._firstname} ${this._lastname}';
+  // String get firstname => this._firstname;
+  // String get lastname => this._lastname;
+  String get completedName => '${this.firstname} ${this.lastname}';
 
   // Setters
 
-  set firstname(String _firstname) => this._firstname = _firstname;
-  set lastname(String _lastname) => this._lastname = _lastname;
+  // set firstname(String _firstname) => this._firstname = _firstname;
+  // set lastname(String _lastname) => this._lastname = _lastname;
 
   // Methods
 
