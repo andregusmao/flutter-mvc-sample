@@ -13,4 +13,7 @@ abstract class _PersonController with Store {
 
   @action
   void setPerson(PersonModel _person) => this._personModel = _person;
+
+  @action
+  void setMessage(String _message) => this._personModel.send(_message);
 }

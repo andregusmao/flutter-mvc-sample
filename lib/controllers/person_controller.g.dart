@@ -47,6 +47,17 @@ mixin _$PersonController on _PersonController, Store {
   }
 
   @override
+  void setMessage(String _message) {
+    final _$actionInfo = _$_PersonControllerActionController.startAction(
+        name: '_PersonController.setMessage');
+    try {
+      return super.setMessage(_message);
+    } finally {
+      _$_PersonControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 person: ${person}
