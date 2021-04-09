@@ -76,6 +76,7 @@ class PersonView extends StatelessWidget {
                   _personModel.firstname = _firstnameController.text;
                   _personModel.lastname = _lastnameController.text;
                   _personController.setPerson(_personModel);
+                  _personController.setMessage('Processo concluído');
                 },
               ),
             ),
